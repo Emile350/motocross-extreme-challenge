@@ -1,37 +1,40 @@
+:root {
+  --bg-1: #09131d;
+  --bg-2: #122a39;
+  --panel: rgba(10, 18, 28, 0.88);
+  --panel-alt: rgba(18, 31, 42, 0.9);
+  --accent: #ffbf1f;
+  --accent-2: #ff7b00;
+  --green: #72f0a6;
+  --danger: #ff4d6d;
+  --text: #eef6ff;
+  --muted: #c6d5eb;
+  --shadow: rgba(0, 0, 0, 0.32);
+}
+
 * {
   box-sizing: border-box;
 }
 
-:root {
-  --bg-1: #0a1220;
-  --bg-2: #14253d;
-  --panel: rgba(12, 18, 31, 0.86);
-  --panel-alt: rgba(24, 36, 52, 0.9);
-  --accent: #ffb703;
-  --accent-2: #fb8500;
-  --green: #5eea8f;
-  --danger: #ff3d57;
-  --text: #edf4ff;
-  --muted: #c6d6ef;
-  --shadow: rgba(0, 0, 0, 0.32);
-}
-
-body {
+html, body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  background: radial-gradient(circle at top, #1d3356 0%, var(--bg-1) 43%, #050d18 100%);
+  background: radial-gradient(circle at top, #173a52 0%, var(--bg-1) 38%, #040c12 100%);
   color: var(--text);
 }
 
-button,
-input {
+body {
+  min-height: 100vh;
+}
+
+button, input {
   font: inherit;
 }
 
 .page-shell {
   width: min(1400px, calc(100% - 28px));
-  margin: 24px auto;
+  margin: 22px auto;
 }
 
 .topbar {
@@ -39,18 +42,18 @@ input {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding: 18px 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 18px 20px;
   border-radius: 18px;
-  background: rgba(10, 18, 32, 0.72);
-  box-shadow: 0 18px 36px var(--shadow);
+  background: rgba(9, 19, 29, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 38px var(--shadow);
 }
 
 .brand {
+  font-size: clamp(1.4rem, 2vw, 2.3rem);
   font-weight: 900;
-  font-size: clamp(1.3rem, 2vw, 2rem);
-  letter-spacing: 0.06em;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--accent);
 }
 
@@ -61,18 +64,18 @@ input {
 }
 
 .name-form input {
+  width: min(360px, 52vw);
   padding: 12px 16px;
-  width: min(320px, 52vw);
-  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   outline: none;
 }
 
 .name-form input:focus {
-  border-color: rgba(255, 183, 3, 0.75);
-  box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.12);
+  border-color: rgba(255, 191, 31, 0.8);
+  box-shadow: 0 0 0 3px rgba(255, 191, 31, 0.13);
 }
 
 .name-form button,
@@ -83,23 +86,23 @@ input {
   font-weight: 800;
   cursor: pointer;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #1d1d1d;
-  box-shadow: 0 12px 24px rgba(251, 133, 0, 0.25);
+  color: #1e1e1e;
+  box-shadow: 0 10px 24px rgba(255, 123, 0, 0.3);
 }
 
 .game-layout {
   display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 24px;
-  margin-top: 24px;
+  grid-template-columns: 330px minmax(0, 1fr);
+  gap: 22px;
+  margin-top: 22px;
 }
 
 .info-panel,
 .arena-panel {
-  background: var(--panel);
-  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 22px;
-  box-shadow: 0 18px 36px var(--shadow);
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 18px 38px var(--shadow);
 }
 
 .info-panel {
@@ -108,7 +111,7 @@ input {
 
 .info-panel h1 {
   margin: 0 0 18px;
-  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  font-size: clamp(2rem, 2.5vw, 2.7rem);
   color: var(--text);
 }
 
@@ -119,8 +122,8 @@ input {
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
   padding: 12px 14px;
 }
@@ -143,18 +146,18 @@ input {
 .mission-box,
 .controls-box {
   margin-top: 20px;
-  background: rgba(24, 36, 52, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
   padding: 16px 18px;
+  background: rgba(20, 33, 45, 0.8);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
 .mission-box h2,
 .controls-box h2 {
-  margin: 0 0 10px;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
+  margin: 0 0 12px;
+  font-size: 0.9rem;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
   color: var(--accent);
 }
 
@@ -168,7 +171,7 @@ input {
 .controls-box p {
   margin: 0;
   padding-left: 18px;
-  line-height: 1.8;
+  line-height: 1.9;
   color: var(--muted);
 }
 
@@ -184,8 +187,8 @@ input {
   max-width: 100%;
   height: auto;
   border-radius: 18px;
-  background: linear-gradient(#5ecbff 0%, #a9e8ff 42%, #d7f3ff 100%);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(#6ecbff 0%, #bfefff 38%, #eafcff 100%);
+  border: 1px solid rgba(255,255,255,0.14);
 }
 
 .game-overlay {
@@ -193,30 +196,30 @@ input {
   inset: 0;
   display: grid;
   place-items: center;
-  background: rgba(1, 8, 17, 0.52);
+  background: rgba(1, 7, 11, 0.42);
 }
 
-.hidden {
+.game-overlay.hidden {
   display: none;
 }
 
 .overlay-card {
   text-align: center;
-  background: rgba(7, 12, 20, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(7, 14, 20, 0.9);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 18px;
   padding: 26px 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.3);
 }
 
 .overlay-card h2 {
-  margin-top: 0;
+  margin: 0 0 12px;
+  color: var(--accent);
   font-size: clamp(2rem, 3vw, 3rem);
-  color: var(--danger);
 }
 
 .overlay-card p {
-  margin-bottom: 16px;
+  margin: 0 0 18px;
   color: var(--muted);
 }
 
