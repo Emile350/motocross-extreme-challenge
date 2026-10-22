@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moto Rush Xtreme</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">Moto Rush Xtreme</div>
+        <div class="name-form">
+          <input
+            id="gameNameInput"
+            type="text"
+            maxlength="30"
+            value="Moto Rush Xtreme"
+            aria-label="Nom du jeu"
+          />
+          <button id="saveNameBtn" type="button">Enregistrer</button>
+        </div>
+      </header>
+
+      <main class="game-layout">
+        <aside class="info-panel">
+          <h1 id="gameTitle">Moto Rush Xtreme</h1>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span>Score</span>
+              <strong id="score">0</strong>
+            </div>
+            <div class="stat-card">
+              <span>Niveau</span>
+              <strong id="level">1</strong>
+            </div>
+            <div class="stat-card">
+              <span>Vitesse</span>
+              <strong id="speed">1x</strong>
+            </div>
+            <div class="stat-card">
+              <span>Vies</span>
+              <strong id="lives">3</strong>
+            </div>
+          </div>
+
+          <div class="mission-box">
+            <h2>Mission</h2>
+            <p id="levelName">Prairie sauvage</p>
+            <ul>
+              <li>Évitez les rochers et barrières.</li>
+              <li>Sautez sur les troncs et obstacles.</li>
+              <li>Atteignez les niveaux les plus difficiles.</li>
+            </ul>
+          </div>
+
+          <div class="controls-box">
+            <h2>Contrôles</h2>
+            <p>← → déplacer</p>
+            <p>↑ / Espace : sauter</p>
+            <p>↓ : croucher</p>
+            <p>R : recommencer</p>
+          </div>
+        </aside>
+
+        <section class="arena-panel">
+          <canvas id="gameCanvas" width="960" height="420"></canvas>
+          <div id="gameOverlay" class="game-overlay hidden">
+            <div class="overlay-card">
+              <h2 id="overlayTitle">Game Over</h2>
+              <p id="overlayText">Tu as perdu !</p>
+              <button id="restartBtn" type="button">Rejouer</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
